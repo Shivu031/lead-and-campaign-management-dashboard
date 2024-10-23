@@ -1,0 +1,101 @@
+.dashboard {
+    margin-left: 14%;
+    padding: 25px;
+}
+
+.dashboard h1{
+    margin-bottom: 20px;
+}
+
+.widgets {
+    display: flex;
+    text-align: center;
+    gap: 50px;
+    color: rgb(75, 72, 72);
+}
+
+.widget {
+    background-color: rgb(217, 237, 237);
+    padding: 10px;
+    border-radius: 8px;
+    flex: 1;
+    box-shadow: 10px 10px 10px rgba(144, 142, 142, 0.5);
+}
+
+.chart {
+    margin-top: 10px;
+    padding: 20px;
+}
+.chart h3{
+    color: rgb(78, 77, 77);
+}
+
+.chartGraph{
+    margin: 0.83% 16.67%;
+    background-color: rgb(247, 251, 251);
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(144, 142, 142, 0.5);
+    border-radius: 10px;
+}
+
+.campaigns {
+    margin-top: 10px;
+}
+
+.campaigns h2 {
+    margin-bottom: 10px;
+    color: rgb(78, 77, 77);
+}
+
+.campaigns ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    gap: 30px;
+    text-align: center;
+}
+
+.campaigns ul li {
+    background-color: rgb(217, 237, 237);
+    padding: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: rgb(75, 72, 72);
+    box-shadow: 10px 10px 10px rgba(144, 142, 142, 0.5);
+}
+
+@media (max-width: 1024px){
+    .chartGraph {
+        margin: 0.83% 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .widgets {
+        gap: 15px;
+    }
+
+    .chartGraph {
+        margin: 0.83% 5%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .widgets {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .chartGraph {
+        margin: 0.83% -4%;
+        padding: 15px;
+    }
+}
+@media (max-width: 480px) {
+    .chartGraph {
+        margin: 0.83% -14%;
+        padding: 15px;
+    }
+}

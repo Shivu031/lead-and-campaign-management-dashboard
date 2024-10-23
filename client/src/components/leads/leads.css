@@ -1,0 +1,62 @@
+.leads {
+    margin-left: 14%;
+    padding: 30px;
+}
+
+.leads h1{
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/* Style for the modal */
+
+.ReactModal__Content {
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+}
+
+.leadBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.leadBtn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}

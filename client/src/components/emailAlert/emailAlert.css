@@ -1,0 +1,62 @@
+.emailAlert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 14%;
+    height: 100vh; /* Full viewport height to center vertically */
+    background-color: #f9f9f9; /* Light background */
+}
+
+.alertCon {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 350px;
+    text-align: center;
+}
+
+.alertCon h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formCon {
+    margin-bottom: 20px;
+}
+
+.formCon input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.formCon input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.alertFormBtn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alertFormBtn:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+}

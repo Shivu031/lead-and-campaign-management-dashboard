@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+************Lead and Campaign Management Dashboard*******
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Project Overview
+    This project is a full-stack application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It simulates a backend for handling leads and campaigns data and provides a frontend interface to manage and visualize the data.
+    
 
-## Available Scripts
+### Key Features:
 
-In the project directory, you can run:
+1. Backend API for managing leads and campaigns:
+    Fetch leads and campaigns.
+    Add dummy leads and campaigns.
+    Generate reports (CSV/PDF).
+    Send email alerts based on lead thresholds.
+2. Frontend:
+    Dashboard with customizable widgets displaying metrics.
+    Leads management section.
+    Analytics section visualized using Chart.js.
+    Reporting tool to download CSV/PDF reports.
+    Responsive design for both desktop and mobile devices.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Backend:
+    Node.js: Backend framework
+    Express.js: Web framework for Node.js
+    MongoDB: NoSQL database
+    Mongoose: ODM for MongoDB
+    Nodemailer: Sending emails
+    json2csv: Generating CSV files
+    pdfkit: Generating PDF files
+## Frontend:
+    React.js: Frontend library for building user interfaces
+    Axios: For making HTTP requests
+    Chart.js: Data visualization library
+    React Bootstrap: For responsive design
+    React Modal: For managing modals
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Project Setup
 
-### `npm run build`
+## Backend Setup
+1. Initialize Project
+    mkdir backend
+    cd backend
+    npm init -y
+2. Install devdependencies
+    npm i -D nodemon
+3. Install dependencies
+    npm install
+4. Start the server
+    nodemon
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Frontend setup
+1. Navigate to the frontend directory:
+    cd ../frontend
+2. Install dependencies:
+    npm install
+3. Start the frontend:
+    npm run start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### API Endpoints
+Here are the backend API endpoints that the frontend interacts with:
 
-### `npm run eject`
+## Leads and Campaigns
+1. GET http://localhost:5000/api/leads
+    Fetch all leads from the database.
+2. POST http://localhost:5000/api/dummy-data
+    Adds dummy data (leads and campaigns) to the database.
+3. GET http://localhost:5000/api/campaigns
+    Fetch all campaigns from the database.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Data Metrics and Analytics
+1. GET http://localhost:5000/api/metrics
+    Fetch total leads, total budget, and average leads per campaign.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Report Generation
+1. GET http://localhost:5000/api/generate-report?type=csv
+    Generate a CSV report of campaign data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. GET http://localhost:5000/api/generate-report?type=pdf
+    Generate a PDF report of campaign data.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Email Alerts
+1. POST http://localhost:5000/api/send-alert
+    Send email alerts when the total leads fall below a threshold.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Backend 
+    backend/
+    ├── controllers/
+    │   └── dataController.js      # API logic for handling requests
+    ├── models/
+    │   ├── campaign.js            # Mongoose model for Campaigns
+    │   └── lead.js                # Mongoose model for Leads
+    ├── routes/
+    │   └── api.js                 # Defines the API routes
+    ├── .env                       # Environment variables (not included in repo)
+    ├── server.js                  # Main server file
+    └── package.json               # Node dependencies and scripts
 
-### Code Splitting
+2. Frontend
+    frontend/
+    ├── src/
+    │   ├── components/
+    │   │   ├── sidebar/Sidebar.js         # Sidebar navigation
+    │   │   ├── dashboard/Dashboard.js       # Main dashboard view
+    │   │   ├── leads/Leads.js           # Leads management
+    │   │   ├── analytics/Analytics.js       # Data analytics with Chart.js
+    │   │   ├── reports/Reports.js         # Report generation page
+    │   └── App.js                 # Main app component
+    ├── .env                       # Environment variables (not included in repo)
+    └── package.json               # React dependencies and scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Features
+1. Leads and Campaigns Management
+    Add Leads and Campaigns: Admin can add dummy leads and campaigns for testing purposes.
+    Fetch Data: Fetch all leads and campaigns via API.
+2. Analytics
+    Chart.js is used to visualize the data.
+    Real-time statistics on leads generated per campaign.
+3. Email Alerts
+    Alerts are sent to a specified email when the total number of leads falls below a given threshold.
+    Configurable using the /send-alert API.
+4. Report Generation
+    Generate CSV and PDF reports based on the data.
+    Downloadable via the frontend interface.
+5. Use Media Queries for responsiveness
